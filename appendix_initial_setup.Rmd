@@ -8,19 +8,15 @@ Joyce Robbins
 
 ## Create new repo
 
-1. Create a new repository by copying this template: http://www.github.com/jtr13/cctemplate and following instructions in the README.
+Create a new repository by copying this template: http://www.github.com/jtr13/cctemplate and following instructions in the README.
 
-### Create a `gh-pages` branch:
+## Pages in repo settings
 
-https://jiafulow.github.io/blog/2020/07/09/create-gh-pages-branch-in-existing-repo/
+Change source to gh-pages
 
-(May happen automatically???)
+May have to trigger GHA to get it to work
 
-### GitHub Pages in repo settings
-
-(May happen automatically???)
-
-## DESCRIPTION file
+## Add packages to DESCRIPTION file
 
 *Need a better process...*
 
