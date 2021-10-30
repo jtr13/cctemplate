@@ -1,0 +1,2 @@
+bookdown::bs4_book:
+  repo: https://github.com/YOUR_GITHUB/YOUR_REPO
