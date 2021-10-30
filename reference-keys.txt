@@ -16,9 +16,8 @@ other-questions
 sample-project
 github-initial-setup
 create-new-repo
-create-a-gh-pages-branch
-github-pages-in-repo-settings
-description-file
+pages-in-repo-settings
+add-packages-to-description-file
 tutorial-for-pull-request-mergers
 general
 check-branch

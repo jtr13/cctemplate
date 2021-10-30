@@ -17,7 +17,7 @@ If PR was submitted from the **main** branch, provide these instructions on how 
 
 2. Follow the instructions here for forgetting to branch if you committed and pushed to GitHub: https://edav.info/github#fixing-mistakes
 
-3. If you have trouble with 2., then delete the local folder of the cc21 project and reclone. (In other words, start over.)
+3. If you have trouble with 2., then delete the local folder of the project, delete your fork on GitHub, and *start over.*
 
 4. Open a new PR.
 
