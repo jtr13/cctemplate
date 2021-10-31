@@ -14,6 +14,8 @@ This is a template for setting up a repo for community bookdown projects.
 
 - [ ] 3. `_output.yml`
 
-- [ ] 4. `instructions.Rmd`
+- [ ] 4. `assignment.Rmd`
+
+- [ ] 5. `instructions.Rmd`
 
 
