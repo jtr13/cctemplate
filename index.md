@@ -1,6 +1,6 @@
 ---
 title: "Community Contributions for ..."
-date: "2021-10-31"
+date: "2021-11-06"
 site: bookdown::bookdown_site
 github-repo: YOUR_USER_NAME/YOUR_REPO
 description: "This book contains community contributions for ..."
