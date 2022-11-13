@@ -135,11 +135,20 @@
 <h2>
 <span class="header-section-number">6.7</span> Steps to Merge the PR<a class="anchor" aria-label="anchor" href="#steps-to-merge-the-pr"><i class="fas fa-link"></i></a>
 </h2>
-<!-- - Open the `_bookdown.yml` file. -->
+<p>Before we click “Merge” there are a few more things to do.</p>
+<div id="update-the-branch" class="section level3">
+<h3>
+<span class="header-section-number">6.7.1</span> Update the branch<a class="anchor" aria-label="anchor" href="#update-the-branch"><i class="fas fa-link"></i></a>
+</h3>
+<p>If an “Update Branch” is visible toward the end on the Conversation tab of the pull request, click on it. This will ensure that we are working with the most up-to-date versions of <code>_bookdown.yml</code> and <code>DESCRIPTION</code>.</p>
+<p>Next we will make changes to these files on the contributor’s branch.</p>
+</div>
+<div id="add-the-filename-of-the-chapter-to-_bookdown.yml" class="section level3">
+<h3>
+<span class="header-section-number">6.7.2</span> Add the filename of the chapter to <code>_bookdown.yml</code><a class="anchor" aria-label="anchor" href="#add-the-filename-of-the-chapter-to-_bookdown.yml"><i class="fas fa-link"></i></a>
+</h3>
 <ul>
-<li><p>Go to the main branch of our project (jtr13/cc21fall1) and open the <code>_bookdown.yml</code> file</p></li>
-<li><p>Copy the entire rmd_files section. It would look something like this
-<code>rmd_files: [ 'index.Rmd', # must be first chapter 'assignment.Rmd', ...., ...., ]</code></p></li>
+<li>Go to “Files Changed” and copy the filename of the <code>.Rmd</code> file.</li>
 </ul>
 <!-- - Open the branch of the submitted PR and open their _bookdown.yml file. --><ul>
 <li>
@@ -153,46 +162,51 @@
 </ul>
 <div class="inline-figure"><img src="resources/tutorial_pull_request_mergers/4.png" width="700"></div>
 </li>
-<li><p>Remove their rmd_files: [] section and paste the one which we copied from the main branch of our project.</p></li>
 <li><p>Add the name of the new file in single quotes followed by a comma under the labelled section (eg. Cheatsheets, Tutorials etc).</p></li>
 <li><p>Save the edited version.</p></li>
-<li><p>Come back to the PR.</p></li>
-<li><p>Merge the PR.</p></li>
-<li><p>Click on the Actions tabs and check whether the build has been successful (A successful build will have a green dot in front of the actions). PLEASE NOTE that the actions take a while to complete (approximately 5-6 mins depending on the number of files to be rendered), so you might need to wait for some time to finally check whether the build was successful or not.</p></li>
-<li><p>In case the build fail and you are not able to understand or rectify it please tag one of the PR Assigners so that they can review it. PLEASE DO NOT <code>revert merge</code> as it would create new branches in the workflow.</p></li>
 </ul>
-<!-- - **delete everything in the file beginning with `rmd_files: [` and then add the name of the new file in single quotes followed by a comma:**
-<img src="resources/tutorial_pull_request_mergers/delete_most_of_bookdown_yml.png" width="700">
-Why? Because it will be easier to fix the merge conflicts this way. (A better way to do this is to merge main into the PR branch *before* adding the new file but this can't be done on GitHub. If there's interest I will explain how to do this locally.)
-- Save the edited version.
-- Click the resolve conflicts button:
-<img src="resources/tutorial_pull_request_mergers/resolve_conflicts.png" width="700">
-- Cut the new filename and paste it into the proper location. Then delete the lines with `<<<<<<< xxxx`, `=======` and `>>>>>>>> main`. In short, the file should look correct when you're done. Click the "Marked as resolved" button and then the green "Commit merge" button. --><div id="pr-leaders-only-add-part-names-to-.rmd-for-every-first-article-in-part" class="section level3">
+</div>
+<div id="add-part-names-to-.rmd-for-every-first-article-in-part" class="section level3">
 <h3>
-<span class="header-section-number">6.7.1</span> PR Leaders only: Add part names to <code>.Rmd</code> for every first article in part<a class="anchor" aria-label="anchor" href="#pr-leaders-only-add-part-names-to-.rmd-for-every-first-article-in-part"><i class="fas fa-link"></i></a>
+<span class="header-section-number">6.7.3</span> (Add part names to <code>.Rmd</code> for every first article in part)<a class="anchor" aria-label="anchor" href="#add-part-names-to-.rmd-for-every-first-article-in-part"><i class="fas fa-link"></i></a>
 </h3>
 <p>Only do this if you are adding the first chapter in a PART.</p>
+<p>One person should manage this, otherwise it will be hard to keep the project organized.</p>
 <p>For every first article of each part, add the chapter name on the top of the <code>.Rmd</code> file, then propose changes. The example is like this.
 <img src="resources/tutorial_pull_request_mergers/chap_1.png" width="700"><br><br></p>
 </div>
+<div id="add-new-libraries-to-description." class="section level3">
+<h3>
+<span class="header-section-number">6.7.4</span> Add new libraries to <code>DESCRIPTION</code>.<a class="anchor" aria-label="anchor" href="#add-new-libraries-to-description."><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li>Check the <code>.Rmd</code> for libraries needed. If any are missing, add them to the <code>DESCRIPTION</code> file on the contributor’s branch, in the same manner that we edited the <code>_bookdown.yml</code> file.</li>
+</ul>
 </div>
-<div id="merge-pr-and-leave-a-comment" class="section level2">
-<h2>
-<span class="header-section-number">6.8</span> Merge PR and leave a comment<a class="anchor" aria-label="anchor" href="#merge-pr-and-leave-a-comment"><i class="fas fa-link"></i></a>
-</h2>
-<p>Now comes the final step.</p>
-<p><strong>If you’re not sure that you did things correctly, assign one of the PR merge leaders or <span class="citation">@jtr13</span> to review before you merge the PR.</strong></p>
-<p>Go back to the conversation tab of the pull requests page, for example:</p>
-<p><a href="https://github.com/jtr13/cc20/pull/23#issuecomment-728506101" class="uri">https://github.com/jtr13/cc20/pull/23#issuecomment-728506101</a></p>
-<p>Leave comments for congratulations 🎉 (type <code>:tada:</code>) and then click on the green button for merge.
-<br></p>
+<div id="merge-the-pull-request" class="section level3">
+<h3>
+<span class="header-section-number">6.7.5</span> Merge the pull request<a class="anchor" aria-label="anchor" href="#merge-the-pull-request"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>If you’re not sure that you did things correctly, assign one of the other maintainers or <span class="citation">@jtr13</span> to review before you merge the PR.</strong></p>
+<ul>
+<li><p>Return to the PR on the main page of the repo <code>www.github.com/jtr13/...</code></p></li>
+<li><p>If necessary resolve merge conflicts by clicking on the resolve merge conflicts button:</p></li>
+</ul>
+<div class="inline-figure"><img src="resources/tutorial_pull_request_mergers/resolve_conflicts.png" width="700"></div>
+<p>Then delete the lines with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt; xxxx</code>, <code>=======</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt; main</code> and edit the file as desired. Click the “Marked as resolved” button and then the green “Commit merge” button. –&gt;</p>
+<ul>
+<li>Click “Merge pull request” and then “Confirm merge”. Add a thank you note perhaps with an emoji such as <code>:tada:</code>.</li>
+</ul>
 </div>
-<div id="check-updated-version" class="section level2">
-<h2>
-<span class="header-section-number">6.9</span> Check updated version<a class="anchor" aria-label="anchor" href="#check-updated-version"><i class="fas fa-link"></i></a>
-</h2>
-<p>A successful merge means that the addition file or files were added to the project with no merge conflicts. It does not mean that the book will render and deploy to GitHub pages without issues. After the merge, it will take about 5-10 minutes for GitHub Actions to render the book and deploy the updated version. Please check that the Action ran successfully and if it didn’t, open up an issue with a link to the failed run.</p>
-
+<div id="check-actions" class="section level3">
+<h3>
+<span class="header-section-number">6.7.6</span> Check Actions<a class="anchor" aria-label="anchor" href="#check-actions"><i class="fas fa-link"></i></a>
+</h3>
+<ul>
+<li><p>After a few minutes, click on the Actions tabs and check whether the build has been successful: a green dot indicates a successful run, a red X indicates a failed run.</p></li>
+<li><p>Check the log to figure out what went wrong, and if you can, fix it. If you’re not sure what to do, not a problem, just open up an issue linking to the failed run so others can help (this is important so we can fix problems quickly). (Do not click <code>revert merge</code>).</p></li>
+</ul>
+</div>
 </div>
 </div>
   <div class="chapter-nav">
@@ -209,10 +223,15 @@ Why? Because it will be easier to fix the merge conflicts this way. (A better wa
 <li><a class="nav-link" href="#check-.rmd-file-contents"><span class="header-section-number">6.5</span> Check .Rmd file contents</a></li>
 <li><a class="nav-link" href="#request-changes"><span class="header-section-number">6.6</span> Request changes</a></li>
 <li>
-<a class="nav-link" href="#steps-to-merge-the-pr"><span class="header-section-number">6.7</span> Steps to Merge the PR</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#pr-leaders-only-add-part-names-to-.rmd-for-every-first-article-in-part"><span class="header-section-number">6.7.1</span> PR Leaders only: Add part names to .Rmd for every first article in part</a></li></ul>
+<a class="nav-link" href="#steps-to-merge-the-pr"><span class="header-section-number">6.7</span> Steps to Merge the PR</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#update-the-branch"><span class="header-section-number">6.7.1</span> Update the branch</a></li>
+<li><a class="nav-link" href="#add-the-filename-of-the-chapter-to-_bookdown.yml"><span class="header-section-number">6.7.2</span> Add the filename of the chapter to _bookdown.yml</a></li>
+<li><a class="nav-link" href="#add-part-names-to-.rmd-for-every-first-article-in-part"><span class="header-section-number">6.7.3</span> (Add part names to .Rmd for every first article in part)</a></li>
+<li><a class="nav-link" href="#add-new-libraries-to-description."><span class="header-section-number">6.7.4</span> Add new libraries to DESCRIPTION.</a></li>
+<li><a class="nav-link" href="#merge-the-pull-request"><span class="header-section-number">6.7.5</span> Merge the pull request</a></li>
+<li><a class="nav-link" href="#check-actions"><span class="header-section-number">6.7.6</span> Check Actions</a></li>
+</ul>
 </li>
-<li><a class="nav-link" href="#merge-pr-and-leave-a-comment"><span class="header-section-number">6.8</span> Merge PR and leave a comment</a></li>
-<li><a class="nav-link" href="#check-updated-version"><span class="header-section-number">6.9</span> Check updated version</a></li>
 </ul>
 
       <div class="book-extra">

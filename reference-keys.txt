@@ -28,6 +28,9 @@ check-.rmd-filename
 check-.rmd-file-contents
 request-changes
 steps-to-merge-the-pr
-pr-leaders-only-add-part-names-to-.rmd-for-every-first-article-in-part
-merge-pr-and-leave-a-comment
-check-updated-version
+update-the-branch
+add-the-filename-of-the-chapter-to-_bookdown.yml
+add-part-names-to-.rmd-for-every-first-article-in-part
+add-new-libraries-to-description.
+merge-the-pull-request
+check-actions
