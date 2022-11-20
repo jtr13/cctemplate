@@ -88,6 +88,7 @@ Your content starts here. </code></pre>
 <li>
 <p>If your project requires data, please use a built-in dataset or read directly from a URL, such as:</p>
 <p><code>df &lt;- readr::read_csv("https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv")</code> <br> If you absolutely must include a data file, please use a small one, as for many reasons it is desirable to keep the repository size as small as possible.</p>
+<p><em>Check that you do not have any code that attempts to read a file from your computer, for example a path starting with “C:\Users\…”.</em></p>
 </li>
 <li>
 <p>If you have included a <code>setup</code> chunk in your <code>.Rmd</code> file, please remember to remove the label <code>setup</code> in the chunk, i.e., use:</p>
@@ -119,10 +120,13 @@ Your content starts here. </code></pre>
 <li><p>Create a new branch and name it with your project name, in our case <code>sample_project</code>. <strong>Do not skip this step. We will not merge your PR if it doesn’t come from a branch.</strong> If you already forgot to do this, check <a href="https://edav.info/github.html#fixing-mistakes">this tutorial</a> for how to fix it.</p></li>
 <li><p>Copy your modified <code>.Rmd</code> file with the same name into the root directory on the branch. In our example, it is <a href="sample_project.Rmd" target="_blank"><code>sample_project.Rmd</code></a>.</p></li>
 <li><p>Do not include an <code>.html</code> file. (In order for the <strong>bookdown</strong> package to work, all <code>.Rmd</code> files will be rendered behind the scenes.)</p></li>
-<li>
-<p>[OPTIONAL] If you have other resources (such as images) included in your project, create a folder under <code>resources/</code>. In our example, it is <a href="resources/sample_project" target="_blank"><code>resources/sample_project/</code></a>. Put the resources files there. Be sure to change all the links in your <code>.Rmd</code> to include <code>resources/.../</code>, for example:</p>
-<p><code>![Test Photo](resources/sample_project/pumpkins.jpg)</code></p>
-</li>
+<li><p>[OPTIONAL] If you have images included in your project, create a folder under <code>resources/</code>. In our example, it is <a href="resources/sample_project" target="_blank"><code>resources/sample_project/</code></a>. Put the image files there. Be sure to change all the links in your <code>.Rmd</code> to include <code>resources/.../</code>, for example:</p></li>
+</ol>
+<div class="sourceCode" id="cb5"><pre class="sourceCode default"><code class="sourceCode default"><span id="cb5-1"><a href="github-submission-instructions.html#cb5-1"></a>```{r, fig.alt="test photo", echo=FALSE}</span>
+<span id="cb5-2"><a href="github-submission-instructions.html#cb5-2"></a>knitr::include_graphics("resources/sample_project/pumpkins.jpg")</span>
+<span id="cb5-3"><a href="github-submission-instructions.html#cb5-3"></a>```</span></code></pre></div>
+<p>(We recommend <code>include_graphics()</code> rather than the markdown format for including images since the images will be sized to fit automatically.)</p>
+<ol start="7" style="list-style-type: decimal">
 <li><p>When you are ready to submit your project, push your branch to your remote repo. Follow <a href="https://help.github.com/en/articles/creating-a-pull-request-from-a-fork">this tutorial</a> to create a pull request.</p></li>
 <li><p>At this point a back and forth will begin with the team managing the pull requests. If you are asked to make changes, simply make the changes on your local branch, save, commit, and push to GitHub. The new commits will be added to your pull request; <strong>you do not need to, and should not, create a new pull request.</strong> (If, based on the circumstances, it does make sense to close the pull request and start a new one, we will tell you.)</p></li>
 <li><p>Once your pull request is merged, it’s fine to delete your local clone (folder) as well as the forked repository in your GitHub account.</p></li>

@@ -33,6 +33,8 @@ After completing these modifications, your `.Rmd` should look like this [sample 
 5. If your project requires data, please use a built-in dataset or read directly from a URL, such as:
 
    `df <- readr::read_csv("https://people.sc.fsu.edu/~jburkardt/data/csv/addresses.csv")` <br> If you absolutely must include a data file, please use a small one, as for many reasons it is desirable to keep the repository size as small as possible.
+   
+   *Check that you do not have any code that attempts to read a file from your computer, for example a path starting with "C:\\Users\\...".*
     
 6. If you have included a `setup` chunk in your `.Rmd` file, please remember to remove the label `setup` in the chunk, i.e., use:
 
@@ -74,9 +76,17 @@ To submit your work, we will be following "Workflow #4" -- that is submitting a 
    
 5. Do not include an `.html` file. (In order for the **bookdown** package to work, all `.Rmd` files will be rendered behind the scenes.)
 
-6. [OPTIONAL] If you have other resources (such as images) included in your project, create a folder under `resources/`. In our example, it is [`resources/sample_project/`](resources/sample_project){target="_blank"}. Put the resources files there. Be sure to change all the links in your `.Rmd` to include `resources/.../`, for example:
+6. [OPTIONAL] If you have images included in your project, create a folder under `resources/`. In our example, it is [`resources/sample_project/`](resources/sample_project){target="_blank"}. Put the image files there. Be sure to change all the links in your `.Rmd` to include `resources/.../`, for example: 
 
-    `![Test Photo](resources/sample_project/pumpkins.jpg)`
+
+````default
+```{r, fig.alt="test photo", echo=FALSE}
+knitr::include_graphics("resources/sample_project/pumpkins.jpg")
+```
+````
+
+(We recommend `include_graphics()` rather than the markdown format for including images since the images will be sized to fit automatically.)
+
 
 7. When you are ready to submit your project, push your branch to your remote repo. Follow [this tutorial](https://help.github.com/en/articles/creating-a-pull-request-from-a-fork) to create a pull request. 
 
