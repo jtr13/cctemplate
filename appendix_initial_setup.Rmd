@@ -1,14 +1,15 @@
 # (PART) Appendices {-}
 
-This chapter contains additional information regarding how to setup the GitHub repo.
-
 # Github initial setup
 
 Joyce Robbins
 
 ## Create new repo
 
-Create a new repository by copying this template: http://www.github.com/jtr13/cctemplate and following instructions in the README.
+*Note: the instructions in this chapter are for the course instructor to create the initial community contribution repository. Students attempting to contribute their community contribution chapters should follow the [instructions here](github-submission-instructions.html).*
+
+Create a new repository by copying this template: http://www.github.com/jtr13/cctemplate and following instructions in the README. 
+
 
 ## Pages in repo settings
 
