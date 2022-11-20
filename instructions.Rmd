@@ -77,9 +77,11 @@ To submit your work, we will be following "Workflow #4" -- that is submitting a 
 
 6. [OPTIONAL] If you have images included in your project, create a folder under `resources/`. In our example, it is [`resources/sample_project/`](resources/sample_project){target="_blank"}. Put the image files there. Be sure to change all the links in your `.Rmd` to include `resources/.../`, for example: 
 
-    ```{r, fig.alt="test photo", echo=FALSE}
-    knitr::include_graphics("resources/sample_project/pumpkins.jpg")
-    ```
+````{verbatim}
+```{r, fig.alt="test photo", echo=FALSE}
+knitr::include_graphics("resources/sample_project/pumpkins.jpg")
+```
+````
 
 (We recommend `include_graphics()` rather than the markdown format for including images since the images will be sized to fit automatically.)
 
